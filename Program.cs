@@ -7,42 +7,21 @@ namespace csharp_basics
   {
     static void Main(string[] args)
     {
-           var john = new Student
-      {
-        FirstName = "John",
-        LastName = "Doe"
-      };
-
-      var jane = new Student
-      {
-        FirstName = "Jane",
-        LastName = "Doe"
-      };
-
-
-      var peter = new Teacher
-      {
-        FirstName = "Peter",
-        LastName = "Ayittah"
-      };
-
-      var niki = new Teacher
-      {
-        FirstName = "Niki",
-        LastName = "Lauda"
-      };
-
-      var students = new List<Student> { john, jane };
-      var teachers = new List<Teacher> { peter, niki };
+      var john = new Student("John", "Doe");
+      var niki = new Teacher("Niki", "Lauda");
 
       var people = new List<Person> { john, niki };
 
-
       foreach (var person in people)
       {
+        //Console.WriteLine(person.Greeting());
         Console.WriteLine(person.Greeting());
+        Console.WriteLine(person.VerifiedStatus);
         Console.WriteLine();
       }
+
+      niki.Verified = true;
+      Console.WriteLine($"Name: {niki.FullName}\nVerified Status: {niki.Verified}");
     }
   }
 }

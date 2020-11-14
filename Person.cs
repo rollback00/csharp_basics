@@ -4,13 +4,22 @@ namespace csharp_basics
 {
   public abstract class Person
   {
-    public string FirstName { get; set; }
+    public Person(string firstName, string lastName, bool verified = false)
+    {
+      FirstName = firstName;
+      LastName = lastName;
+      Verified = verified;
+    }
 
-    public string LastName { get; set; }
+    public string FirstName { get; }
 
-    public abstract bool Verified { get; set; }
+    public string LastName { get; }
+
+    public bool Verified { get; set; }
 
     public string FullName => $"{FirstName} {LastName}";
+
+    public string VerifiedStatus => $"Verified status: {Verified}";
 
     public abstract string Greeting(string signature = "Hi");
   }

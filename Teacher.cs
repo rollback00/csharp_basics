@@ -2,7 +2,7 @@
 {
   class Teacher : Person
   {
-    public override bool Verified { get; set; } = false;
+    public Teacher(string firstName, string lastName) : base(firstName, lastName) { }
 
     public override string Greeting(string signature = "Hello") => $"{signature}, I'm {FullName}! A teacher";
 
