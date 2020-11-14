@@ -31,14 +31,14 @@ namespace csharp_basics
         LastName = "Ayittah"
       };
 
-      var caleb = new Teacher
+      var niki = new Teacher
       {
-        FirstName = "Caleb",
-        LastName = "Curry"
+        FirstName = "Niki",
+        LastName = "Lauda"
       };
 
       teachers.Add(peter);
-      teachers.Add(caleb);
+      teachers.Add(niki);
 
 
       foreach (var student in students)
