@@ -22,6 +22,11 @@ namespace csharp_basics
 
       niki.Verified = true;
       Console.WriteLine($"Name: {niki.FullName}\nVerified Status: {niki.Verified}");
+
+      IPrint st = new Student("Pop", "Oko");
+      st.Counter = "printing";
+
+      Console.WriteLine($"Student: {((Student)st).FullName} is {st.Counter}");
     }
   }
 }
