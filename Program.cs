@@ -7,10 +7,7 @@ namespace csharp_basics
   {
     static void Main(string[] args)
     {
-      var students = new List<Student>();
-      var teachers = new List<Teacher>();
-
-      var john = new Student
+           var john = new Student
       {
         FirstName = "John",
         LastName = "Doe"
@@ -22,8 +19,6 @@ namespace csharp_basics
         LastName = "Doe"
       };
 
-      students.Add(john);
-      students.Add(jane);
 
       var peter = new Teacher
       {
@@ -37,24 +32,17 @@ namespace csharp_basics
         LastName = "Lauda"
       };
 
-      teachers.Add(peter);
-      teachers.Add(niki);
+      var students = new List<Student> { john, jane };
+      var teachers = new List<Teacher> { peter, niki };
+
+      var people = new List<Person> { john, niki };
 
 
-      foreach (var student in students)
+      foreach (var person in people)
       {
-        Console.WriteLine(student.Greeting());
+        Console.WriteLine(person.Greeting());
+        Console.WriteLine();
       }
-
-      Console.WriteLine();
-
-      foreach (var teacher in teachers)
-      {
-        Console.WriteLine(teacher.Greeting());
-      }
-
-      //var person = new Person();
-
     }
   }
 }

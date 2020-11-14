@@ -1,4 +1,6 @@
-﻿namespace csharp_basics
+﻿using System.Collections.Generic;
+
+namespace csharp_basics
 {
   public abstract class Person
   {
@@ -11,6 +13,5 @@
     public string FullName => $"{FirstName} {LastName}";
 
     public abstract string Greeting(string signature = "Hi");
-
   }
 }
